@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;700&family=Caveat:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background: theme("colors.parchment.50");
+    color: theme("colors.ink.700");
+    font-family: theme("fontFamily.serif");
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background-image:
+      radial-gradient(
+        circle at 10% 10%,
+        rgba(202, 169, 101, 0.06) 0%,
+        transparent 40%
+      ),
+      radial-gradient(
+        circle at 90% 90%,
+        rgba(202, 169, 101, 0.05) 0%,
+        transparent 35%
+      );
+    min-height: 100dvh;
+  }
+
+  ::selection {
+    background: theme("colors.ink.700");
+    color: theme("colors.parchment.50");
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: theme("fontFamily.display");
+    color: theme("colors.ink.900");
+    font-weight: 600;
+  }
+
+  a {
+    color: theme("colors.cinnabar.600");
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+@layer components {
+  .specimen-rule {
+    background-image: linear-gradient(
+      to right,
+      theme("colors.ink.700") 0%,
+      theme("colors.ink.700") 30%,
+      transparent 30%,
+      transparent 35%,
+      theme("colors.ink.700") 35%,
+      theme("colors.ink.700") 65%,
+      transparent 65%,
+      transparent 70%,
+      theme("colors.ink.700") 70%,
+      theme("colors.ink.700") 100%
+    );
+    height: 1px;
+  }
+
+  .paper-card {
+    background: theme("colors.parchment.100");
+    border: 1px solid theme("colors.parchment.300");
+    box-shadow: theme("boxShadow.card");
+  }
+
+  .diagram-svg {
+    color: theme("colors.ink.700");
+  }
+  .diagram-svg .ink {
+    stroke: currentColor;
+    fill: none;
+  }
+  .diagram-svg .ink-fill {
+    fill: currentColor;
+  }
+  .diagram-svg .accent {
+    stroke: theme("colors.cinnabar.600");
+    fill: none;
+  }
+  .diagram-svg .accent-fill {
+    fill: theme("colors.cinnabar.600");
+  }
+  .diagram-svg .leaf {
+    stroke: theme("colors.botanical.500");
+    fill: none;
+  }
+  .diagram-svg .leaf-fill {
+    fill: theme("colors.botanical.500");
+  }
+  .diagram-svg .label {
+    font-family: theme("fontFamily.serif");
+    font-style: italic;
+    font-size: 11px;
+    fill: theme("colors.ink.700");
+  }
+  .diagram-svg .label-mono {
+    font-family: theme("fontFamily.mono");
+    font-size: 10px;
+    fill: theme("colors.ink.700");
+  }
+  .diagram-svg .hand {
+    font-family: theme("fontFamily.hand");
+    font-size: 14px;
+    fill: theme("colors.ink.600");
+  }
+}
+
+.prose-bug p {
+  margin-bottom: 1.1em;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.prose-bug p:last-child {
+  margin-bottom: 0;
+}
+
+.prose-bug h2 {
+  margin-top: 2em;
+  margin-bottom: 0.4em;
+  font-size: 1.4rem;
+}
+
+.prose-bug em {
+  color: theme("colors.ink.600");
+}
+
+.prose-bug strong {
+  color: theme("colors.ink.900");
+  font-weight: 600;
+}
+
+.prose-bug code {
+  font-family: theme("fontFamily.mono");
+  font-size: 0.88em;
+  background: theme("colors.parchment.200");
+  padding: 1px 5px;
+  border-radius: 3px;
+  color: theme("colors.ink.900");
+}
