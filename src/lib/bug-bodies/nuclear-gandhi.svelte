@@ -14,9 +14,7 @@
 	canonical example of why type discipline matters.
 </p>
 
-<p>
-	The story is almost certainly not true.
-</p>
+<p>The story is almost certainly not true.</p>
 
 <p>
 	Sid Meier, the lead designer of Civilization, addressed it directly in his 2020 memoir. The
@@ -30,25 +28,24 @@
 <p>
 	The actual nuclear Gandhi exists in Civilization V, released in 2010. The Civilization V
 	designers, aware of the popular myth, deliberately wrote Gandhi's nuclear-launch threshold
-	lower than every other leader's, as an inside joke. Gandhi in Civilization V is statistically
-	more eager to use atomic weapons than any other leader in the game. The bug had never existed;
-	the joke implementation made the bug retroactively real.
+	lower than other leaders', as an inside joke. Gandhi in Civilization V is statistically more
+	eager to use atomic weapons than any other leader in the game. The bug had never existed; the
+	joke implementation made the bug retroactively real.
 </p>
 
 <p>
-	The story is included in this guide because <em>every other guide includes it</em>, and the
-	thing it is most useful for illustrating is not integer overflow but the way computing
-	folklore propagates. An anecdote about a bug is socially much cheaper to repeat than the bug
-	itself, which would require a debugger. Once a bug story is good enough to remember, the
-	question of whether it actually happened becomes a curiosity for historians and irrelevant to
-	programmers, who will tell the story anyway.
+	The story is included in this guide because of the form it takes, not the fact it claims. An
+	anecdote about a bug is socially much cheaper to repeat than the bug itself, which would
+	require a debugger. Once a bug story is good enough to remember, the question of whether it
+	actually happened becomes a curiosity for historians and irrelevant to programmers, who will
+	tell the story anyway.
 </p>
 
 <p>
 	The nuclear Gandhi myth is now closer to truth than it has ever been, because Firaxis put it
 	into the game. The original bug, if there ever was one, is unfalsifiable: the 1991 codebase is
 	not public, and the engineers who wrote it say it did not happen. The specimen pinned to this
-	page is a story about the bug, not the bug.
+	page is a story <em>about</em> the bug, not the bug.
 </p>
 
 <p>

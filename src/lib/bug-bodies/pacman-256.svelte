@@ -30,10 +30,11 @@
 
 <p>
 	This was the first widely-known <em>kill screen</em>: a level you cannot pass because the game
-	itself has overwritten the means of passing. Donkey Kong has one, at level 22. Dig Dug has one.
-	The pattern is the same. A counter or a pointer rolls over into territory the original
-	programmer did not anticipate, and the game gracelessly draws or interprets memory until
-	progress becomes mechanically impossible.
+	itself has overwritten the means of passing. Donkey Kong has a famous kill screen at level 22,
+	produced by a different overflow (a time-bonus calculation, not a level counter). Dig Dug has
+	one for the same family of reasons. The pattern is the same. A counter or a pointer rolls
+	over into territory the original programmer did not anticipate, and the game gracelessly
+	draws or interprets memory until progress becomes mechanically impossible.
 </p>
 
 <p>
@@ -47,6 +48,6 @@
 </p>
 
 <p>
-	The lesson is the smallest possible one, and the most universal: <em>every counter has a
-	maximum</em>. If you don't decide what happens past it, the hardware will decide.
+	The lesson is the smallest possible one, and the most universal: a counter has a maximum, and
+	if you do not decide what happens past it, the hardware will decide for you.
 </p>

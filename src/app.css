@@ -47,7 +47,8 @@
     text-underline-offset: 3px;
   }
 
-  a:hover {
+  /* Hover underline only on links that opt in. Catalog cards and headers use no-underline. */
+  a:not(.no-underline):hover {
     text-decoration: underline;
   }
 }
@@ -120,8 +121,15 @@
 
 .prose-bug p {
   margin-bottom: 1.1em;
-  text-align: justify;
+  text-align: left;
   hyphens: auto;
+}
+
+/* Justify only at column widths where rivers don't form. */
+@media (min-width: 640px) {
+  .prose-bug p {
+    text-align: justify;
+  }
 }
 
 .prose-bug p:last-child {

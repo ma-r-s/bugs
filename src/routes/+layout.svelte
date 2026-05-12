@@ -32,7 +32,7 @@
 				Compiled and illustrated by
 				<a href="https://www.ma-r-s.com" class="hover:text-cinnabar-600">Mario A. Ruiz</a>
 			</span>
-			<span>CC BY-NC 4.0 · 2026</span>
+			<span>© 2026 Mario A. Ruiz · CC BY-NC 4.0</span>
 		</div>
 	</footer>
 </div>

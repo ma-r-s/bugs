@@ -1,6 +1,6 @@
 <p>
 	At 8:40 PM local time on February 25, 1991, an Iraqi Scud missile entered the airspace over
-	Dharan, Saudi Arabia, on a trajectory toward a U.S. Army barracks. A nearby Patriot missile
+	Dhahran, Saudi Arabia, on a trajectory toward a U.S. Army barracks. A nearby Patriot missile
 	battery detected the incoming Scud, computed an intercept solution, and decided not to fire.
 	The Scud landed on the barracks. Twenty-eight American soldiers died and approximately one
 	hundred were wounded.
@@ -21,8 +21,8 @@
 <p>
 	The number 0.1 cannot be represented exactly in binary floating point. The Patriot used a
 	24-bit fixed-point representation that introduced a small truncation error on each conversion:
-	about <strong>0.0000000953 seconds</strong> per tick, or roughly one part in 10⁷. The error
-	accumulated linearly with uptime. After one hundred hours, the cumulative error was 0.34
+	about <strong>0.0000000953 seconds</strong> per tick, roughly one part in ten million. The
+	error accumulated linearly with uptime. After one hundred hours, the cumulative error was 0.34
 	seconds.
 </p>
 
@@ -38,7 +38,7 @@
 <p>
 	A fix was already in flight. Raytheon had identified the drift problem weeks earlier and
 	produced a patch that corrected the clock conversion. The patched software arrived at the
-	Dharan battery the morning <em>after</em> the strike, by truck. The battery had been on
+	Dhahran battery the morning <em>after</em> the strike, by truck. The battery had been on
 	continuous operation for over a hundred hours when the Scud came in; it had passed the
 	threshold of accumulated error needed to make the bug fatal.
 </p>
@@ -53,7 +53,9 @@
 
 <p>
 	The lesson is the one floating-point papers have repeated for sixty years and that working
-	programmers continue to learn the hard way: <em>error in floating-point representation is not a
-	bug, it is a tax</em>. The tax is paid every operation. It is the engineer's job to know how
-	much has been paid and how much room remains.
+	programmers continue to learn the hard way:
+	<em class="underline decoration-dotted underline-offset-4">
+		error in floating-point representation is not a bug, it is a tax
+	</em>. The tax is paid every operation. It is the engineer's job to know how much has been
+	paid and how much room remains.
 </p>

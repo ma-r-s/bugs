@@ -99,14 +99,15 @@ bun run preview     # preview the production build locally
 
 1. Add a row to the `bugs` array in `src/lib/bugs.ts` with all metadata fields
    (id, slug, name, scientific name, family, year, habitat, observer, tagline,
-   consequence, sources).
+   consequence, and a `sources` array of `{ title, url }` pairs).
 2. Create `src/lib/bug-bodies/<slug>.svelte` with the writeup. The component is
    plain content wrapped by the page's `.prose-bug` styling.
 3. Create `src/lib/bug-diagrams/<slug>.svelte` with the inline SVG. Use the
    diagram classes defined in `app.css` for visual consistency.
 
 The slug-based glob in `src/routes/[slug]/+page.svelte` picks both up
-automatically.
+automatically. Prev/next navigation, the sitemap, and the catalog index pick
+the new row up from `bugs.ts` without further wiring.
 
 ## License
 

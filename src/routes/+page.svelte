@@ -57,6 +57,9 @@
 				<p class="mt-4 font-serif text-[15px] leading-snug text-ink-700">
 					{bug.tagline}
 				</p>
+				<p class="mt-3 font-serif text-[12px] italic leading-snug text-ink-400">
+					{bug.consequence}
+				</p>
 			</a>
 		</li>
 	{/each}

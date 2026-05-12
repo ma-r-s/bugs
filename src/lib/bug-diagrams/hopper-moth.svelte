@@ -19,10 +19,10 @@
 
 		<!-- Log entries -->
 		<text x="10" y="45" class="hand" font-size="14">
-			15:45 · Relay #70 Panel F. Found first
+			15:45 · Relay #70 Panel F.
 		</text>
 		<text x="10" y="65" class="hand" font-size="14">
-			actual case of bug being found.
+			First actual case of bug being found.
 		</text>
 
 		<!-- The moth, taped center -->

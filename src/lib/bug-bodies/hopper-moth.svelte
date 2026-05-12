@@ -26,9 +26,9 @@
 <p>
 	The joke is good, and it survived for the same reason all good jokes do: it sits on a perfect
 	hinge. "Bug" had been a metaphor for decades. A literal bug, an actual insect, an
-	identifiable lepidopteran specimen, in the actual mechanism, is the moment the metaphor briefly
-	collapses into a physical referent. The page in the logbook is the punchline of an engineering
-	tradition that was already half a century old when the moth flew into the relay.
+	identifiable moth, in the actual mechanism, is the moment the metaphor briefly collapses into
+	a physical referent. The page in the logbook is the punchline of an engineering tradition that
+	was already half a century old when the moth flew into the relay.
 </p>
 
 <p>
@@ -42,13 +42,12 @@
 </p>
 
 <p>
-	The lesson is small and worth saying. <em>Etymology is recovery</em>. Words come from somewhere.
-	When the source is a tradition, the words tend to be older than the famous moment everyone
-	associates them with. The Mark II moth is the most famous moth in computing, and it is also a
-	postcard from a tradition that already had a word for what the moth did.
+	The lesson is small and worth saying.
+	<em class="underline decoration-dotted underline-offset-4">Etymology is recovery.</em>
+	Words come from somewhere. When the source is a tradition, the words tend to be older than the
+	famous moment everyone associates them with. The Mark II moth is the most famous moth in
+	computing, and it is also a postcard from a tradition that already had a word for what the
+	moth did.
 </p>
 
-<p>
-	The moth is in good condition for an eighty-year-old specimen, taped flat under glass. It is
-	smaller than you expect.
-</p>
+<p>The moth is in good condition for an eighty-year-old specimen, taped flat under glass. It is smaller than you expect.</p>

@@ -19,11 +19,21 @@
 
 	const Body = $derived(bodies[`/src/lib/bug-bodies/${bug.slug}.svelte`]?.default ?? null);
 	const Diagram = $derived(diagrams[`/src/lib/bug-diagrams/${bug.slug}.svelte`]?.default ?? null);
+
+	const pageTitle = $derived(`${bug.name} · Bugs`);
+	const pageUrl = $derived(`https://bugs.ma-r-s.com/${bug.slug}`);
 </script>
 
 <svelte:head>
-	<title>{bug.name} · Bugs</title>
+	<title>{pageTitle}</title>
 	<meta name="description" content={bug.tagline} />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content={bug.name} />
+	<meta property="og:description" content={bug.tagline} />
+	<meta property="og:url" content={pageUrl} />
+	<meta name="twitter:title" content={bug.name} />
+	<meta name="twitter:description" content={bug.tagline} />
+	<link rel="canonical" href={pageUrl} />
 </svelte:head>
 
 <SpecimenCard {bug}>

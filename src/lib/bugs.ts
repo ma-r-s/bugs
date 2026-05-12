@@ -29,7 +29,7 @@ export const bugs: Bug[] = [
     id: "BG-001",
     slug: "500-mile-email",
     name: "The 500-Mile Email",
-    scientificName: "Sendmail epistola quincenti milia",
+    scientificName: "Sendmail epistola quingentorum milium",
     family: "Network Anomalies",
     year: "2002",
     habitat: "Statistics Dept. mail server, UNC Chapel Hill",
@@ -48,12 +48,12 @@ export const bugs: Bug[] = [
     id: "BG-002",
     slug: "wifi-only-rain",
     name: "The Wi-Fi That Worked Only When It Rained",
-    scientificName: "Aqua restituens signalum",
+    scientificName: "Aqua restituens signum",
     family: "Radio-Frequency Specimens",
     year: "2024",
     habitat: "A suburban home, recently re-occupied",
     observer: "Predrag Gruevski, personal blog",
-    tagline: "The 5 GHz link returned 98% packet loss except during storms.",
+    tagline: "The wireless link returned 98% packet loss except during storms.",
     consequence: "One season of online classes, taken in the rain.",
     sources: [
       {
@@ -70,7 +70,7 @@ export const bugs: Bug[] = [
     id: "BG-003",
     slug: "tuesday-printer",
     name: "OpenOffice Will Not Print on Tuesdays",
-    scientificName: "Magicus dies martis",
+    scientificName: "Magicus dies Martis",
     family: "Calendar-Coupled Faults",
     year: "2008",
     habitat: "CUPS print queues, Ubuntu 8.04",
@@ -124,7 +124,7 @@ export const bugs: Bug[] = [
     tagline:
       "A race condition between operator keystrokes and turntable rotation.",
     consequence:
-      "Three deaths, three permanent injuries, removed from service.",
+      "At least three deaths, multiple severe injuries, removed from service.",
     sources: [
       {
         title: 'Leveson, "An Investigation of the Therac-25 Accidents"',
@@ -138,24 +138,24 @@ export const bugs: Bug[] = [
   },
   {
     id: "BG-006",
-    slug: "patriot-dharan",
-    name: "The Patriot at Dharan",
-    scientificName: "Tempus erroneus",
+    slug: "patriot-dhahran",
+    name: "The Patriot at Dhahran",
+    scientificName: "Tempus erroneum",
     family: "Floating-Point Tragedies",
     year: "1991",
     habitat: "MIM-104 Patriot, Saudi Arabia",
     observer: "U.S. Government Accountability Office",
     tagline:
       "A clock that drifted 0.34 seconds across one hundred hours of uptime.",
-    consequence: "28 American soldiers killed, ~100 injured.",
+    consequence: "28 American soldiers killed, around 100 wounded.",
     sources: [
       {
         title: "GAO/IMTEC-92-26 Patriot Missile Defense",
         url: "https://www.gao.gov/products/imtec-92-26",
       },
       {
-        title: "Dharan barracks bombing (Wikipedia)",
-        url: "https://en.wikipedia.org/wiki/Dharan_barracks_bombing",
+        title: "1991 Khobar bombing (Wikipedia)",
+        url: "https://en.wikipedia.org/wiki/1991_Khobar_bombing",
       },
     ],
   },
@@ -185,7 +185,7 @@ export const bugs: Bug[] = [
     id: "BG-008",
     slug: "nuclear-gandhi",
     name: "Nuclear Gandhi",
-    scientificName: "Mythos integer subtractus",
+    scientificName: "Fabula apocrypha",
     family: "Apocryphal Specimens",
     year: "1991 (alleged), 2010 (canonized)",
     habitat: "Sid Meier's Civilization",
@@ -278,7 +278,7 @@ export const bugs: Bug[] = [
     id: "BG-012",
     slug: "blackout-2003",
     name: "The Northeast Blackout",
-    scientificName: "Race conditio reticularis",
+    scientificName: "Conditio cursoria reticularis",
     family: "Infrastructure-Scale Faults",
     year: "2003",
     habitat: "FirstEnergy's XA/21 EMS, Akron control room",
@@ -301,3 +301,18 @@ export const bugs: Bug[] = [
 ];
 
 export const bugBySlug = Object.fromEntries(bugs.map((b) => [b.slug, b]));
+
+/** Catalog index map for prev/next navigation. */
+export const bugIndex = new Map(bugs.map((b, i) => [b.slug, i]));
+
+export function neighbors(slug: string): {
+  prev: Bug | null;
+  next: Bug | null;
+} {
+  const i = bugIndex.get(slug);
+  if (i === undefined) return { prev: null, next: null };
+  return {
+    prev: i > 0 ? bugs[i - 1] : null,
+    next: i < bugs.length - 1 ? bugs[i + 1] : null,
+  };
+}

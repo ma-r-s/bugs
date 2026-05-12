@@ -1,6 +1,6 @@
 <p>
-	The user's complaint to the Ubuntu bug tracker, filed in August 2008, was brief: OpenOffice will
-	not print on Tuesdays. The bug had been observed for several weeks. The user wanted help.
+	The user's complaint to the Ubuntu bug tracker, filed in August 2008, was brief: OpenOffice
+	will not print on Tuesdays. The bug had been observed for several weeks. The user wanted help.
 </p>
 
 <p>
@@ -17,9 +17,9 @@
 
 <p>
 	The print system is CUPS. CUPS does not trust applications to declare the file format of their
-	output. Instead it shells out to <code>file</code>, the venerable Unix utility for sniffing file
-	types from their first few bytes. The <code>file</code> command looks up the bytes in a magic
-	database compiled from human-written rules.
+	output. Instead it shells out to <code>file</code>, the venerable Unix utility for sniffing
+	file types from their first few bytes. The <code>file</code> command looks up the bytes in a
+	magic database compiled from human-written rules.
 </p>
 
 <p>
@@ -46,6 +46,6 @@
 
 <p>
 	The lesson is one most working programmers know in the abstract: every magic-byte detector is
-	wrong on inputs its author didn't imagine. The lesson made memorable is that some inputs only
+	wrong on inputs its author did not imagine. The lesson made memorable is that some inputs only
 	occur one day a week.
 </p>

@@ -1,8 +1,8 @@
 <p>
 	Knight Capital Group was, in the summer of 2012, one of the largest market makers on the New
 	York Stock Exchange. It handled roughly ten percent of the trading volume of U.S. equities. On
-	the morning of August 1st, it deployed a software update to support a new SEC program. By 10:15
-	AM Eastern, it had lost $440 million. By the end of the week, it had been forced to sell
+	the morning of August 1st, it deployed a software update to support a new SEC program. By
+	10:15 AM Eastern, it had lost $440 million. By the end of the week, it had been forced to sell
 	itself.
 </p>
 
@@ -56,12 +56,12 @@
 <p>
 	Knight sold itself to Getco LLC three months later in a deal that effectively ended the
 	company as an independent firm. The SEC fined the surviving entity $12 million. The events of
-	that morning are now standard reading in <em>every</em> serious software-engineering curriculum
-	that touches on operations.
+	that morning are now standard reading in serious software-engineering curricula that touch on
+	operations.
 </p>
 
 <p>
 	The lesson is one no senior engineer needs to hear and one every junior engineer should:
-	<em>deprecation is not deletion</em>. Code that is "off" is code that can be turned back on by
-	a single bit, and bits get reused.
+	<em class="underline decoration-dotted underline-offset-4">deprecation is not deletion</em>.
+	Code that is "off" is code that can be turned back on by a single bit, and bits get reused.
 </p>

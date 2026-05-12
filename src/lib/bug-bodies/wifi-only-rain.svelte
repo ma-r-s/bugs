@@ -17,42 +17,41 @@
 	a new SSID.
 </p>
 
-<p>
-	The cause was a tree.
-</p>
+<p>The cause was a tree.</p>
 
 <p>
 	Wireless propagation does not work like a laser. The signal is a wave whose energy occupies a
 	roughly ellipsoidal volume between transmitter and receiver: the <em>Fresnel zone</em>. Objects
-	inside the Fresnel zone cause interference, even if the direct line of sight is clear. For a 5
-	GHz link over a typical garden distance, the first Fresnel zone is approximately one meter at
+	inside the Fresnel zone cause interference, even if the direct line of sight is clear. For a
+	2.4 GHz link over a typical garden distance, the first Fresnel zone is approximately a meter at
 	its widest.
 </p>
 
 <p>
 	A nearby tree had grown just tall enough to encroach on the upper boundary of the Fresnel zone.
-	The encroachment was minor in still air, but minor encroachments matter a lot at 5 GHz. When it
-	rained, water collected on the leaves, the branches bent under the new weight, and the canopy
-	dropped clear of the Fresnel zone. Signal recovered. As the canopy dried out, the branches
-	sprang back to their dry position and re-occupied the zone. Signal died.
+	The encroachment was minor in still air, but minor encroachments matter on a marginal link.
+	When it rained, water collected on the leaves, the branches bent under the new weight, and the
+	canopy dropped clear of the Fresnel zone. Signal recovered. As the canopy dried out, the
+	branches sprang back to their dry position and re-occupied the zone. Signal died.
 </p>
 
 <p>
 	The fifteen-minute tail after each storm corresponded to the time it took for residual water to
 	drip off the leaves and the branches to spring back. The system's behavior was a one-line
-	mechanical model: a damped oscillator with rain as input, branch height as state, packet loss as
-	output. Everything else was a consequence.
+	mechanical model: a damped oscillator with rain as input, branch height as state, packet loss
+	as output. Everything else was a consequence.
 </p>
 
 <p>
-	Gruevski upgraded the link from 802.11g to 802.11n, which uses beamforming and multi-input
-	antennas to tolerate more interference, and the connection became indifferent to weather.
+	Gruevski replaced the link with hardware that used beamforming and multi-input antennas to
+	tolerate the marginal geometry, and the connection became indifferent to weather.
 </p>
 
 <p>
 	The bug is satisfying not because it is unusual (wireless interference from foliage is a known
 	problem in WISP deployments) but because the failure mode is so cleanly mechanical that it
 	feels like it shouldn't be allowed. The internet is not supposed to care about
-	<em class="underline decoration-dotted underline-offset-4">how heavy the leaves are today</em>.
-	It does anyway.
+	<em class="underline decoration-dotted underline-offset-4">
+		how heavy the leaves are today
+	</em>. It does anyway.
 </p>

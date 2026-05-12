@@ -11,8 +11,7 @@
 	The post-mortem identified a defect in the guidance software running on the ground tracker
 	(not, contrary to legend, on the rocket itself). The story that ran in newspapers the next week
 	described "a missing hyphen" in the code. That description has persisted for sixty-four years.
-	It is wrong by one notational character, in a way that is itself a small parable about the
-	difficulty of explaining engineering to a general audience.
+	It is wrong by one notational character.
 </p>
 
 <p>
@@ -44,9 +43,9 @@
 </p>
 
 <p>
-	The pleasant irony is that the real cause is more interesting than the myth. A missing hyphen
-	is a typo. A missing overbar is a missing operation, a small handwritten convention that did
-	not survive the trip from a chalkboard to a Fortran listing. Mariner 2, with the overbar
-	properly transcribed, launched five weeks later and successfully became the first spacecraft to
-	return data from another planet.
+	The real cause is more interesting than the myth. A missing hyphen is a typo. A missing
+	overbar is a missing <em>operation</em>: a small handwritten convention that did not survive
+	the trip from a chalkboard to a Fortran listing. Mariner 2, with the overbar properly
+	transcribed, launched five weeks later and successfully became the first spacecraft to return
+	data from another planet.
 </p>
