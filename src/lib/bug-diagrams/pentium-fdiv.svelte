@@ -1,54 +1,56 @@
-<svg viewBox="0 0 460 260" class="diagram-svg w-full max-w-md" xmlns="http://www.w3.org/2000/svg">
-	<!-- The lookup table grid -->
-	<g transform="translate(40 30)">
-		<text class="label-mono">SRT LOOKUP TABLE · 2,048 ENTRIES</text>
+<svg
+	viewBox="0 0 460 300"
+	class="diagram-svg w-full max-w-lg"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<defs>
+		<pattern id="fdiv-cell" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+			<rect width="6.5" height="6.5" x="0" y="0" fill="#f6efd9" stroke="currentColor" stroke-width="0.5" />
+		</pattern>
+	</defs>
 
-		<!-- 32 columns × 8 rows visualization (256 cells out of 2048) -->
-		<g transform="translate(0 14)">
-			<!-- Draw cells -->
-			{#each Array(8) as _, row}
-				{#each Array(32) as _, col}
-					{@const i = row * 32 + col}
-					{@const missing = i === 76 || i === 122 || i === 168 || i === 200 || i === 232}
-					<rect
-						x={col * 8}
-						y={row * 8}
-						width="6.5"
-						height="6.5"
-						class={missing ? 'accent' : 'ink'}
-						fill={missing ? '#a13929' : '#f6efd9'}
-						stroke-width="0.6"
-					/>
-				{/each}
-			{/each}
+	<!-- Lookup table -->
+	<g transform="translate(80 40)">
+		<text x="0" y="-10" class="label-mono">SRT LOOKUP TABLE · 2,048 ENTRIES</text>
+		<!-- Tile the grid: 32 cols × 8 rows = 256 visible cells -->
+		<rect width="256" height="64" fill="url(#fdiv-cell)" />
+
+		<!-- Five missing entries highlighted -->
+		<g class="accent" fill="#a13929" fill-opacity="0.65" stroke="none">
+			<rect x="80" y="16" width="6.5" height="6.5" />
+			<rect x="120" y="16" width="6.5" height="6.5" />
+			<rect x="56" y="40" width="6.5" height="6.5" />
+			<rect x="160" y="24" width="6.5" height="6.5" />
+			<rect x="216" y="32" width="6.5" height="6.5" />
 		</g>
 
-		<text x="0" y="100" class="label" font-size="11">
-			5 entries omitted in mask layout
+		<text x="0" y="84" class="label" font-size="11">
+			5 entries omitted in the mask layout
 		</text>
 	</g>
 
-	<!-- The division example -->
-	<g transform="translate(40 170)">
+	<!-- Example math -->
+	<g transform="translate(40 180)">
 		<text class="label-mono">EXAMPLE</text>
-
-		<text y="20" class="label-mono" font-size="14">
-			4195835.0 ÷ 3145727.0
-		</text>
-		<text y="40" class="label-mono" font-size="14">
-			= 1.33382045
-			<tspan fill="#7d2a1d">2</tspan>
-			<tspan>... (Pentium)</tspan>
-		</text>
-		<text y="58" class="label-mono" font-size="14">
-			= 1.33382045
-			<tspan>5</tspan>
-			<tspan>... (correct)</tspan>
-		</text>
+		<g transform="translate(0 22)">
+			<text class="label-mono" font-size="13">
+				4 195 835.0  ÷  3 145 727.0
+			</text>
+			<text y="22" class="label-mono" font-size="13">
+				= 1.3338204
+				<tspan fill="#7d2a1d" font-weight="600">2</tspan>
+				…   (Pentium)
+			</text>
+			<text y="42" class="label-mono" font-size="13">
+				= 1.3338204
+				<tspan fill="currentColor" font-weight="600">5</tspan>
+				…   (correct)
+			</text>
+		</g>
 	</g>
 
-	<!-- Note -->
-	<text x="430" y="218" class="hand" text-anchor="end" font-size="13">
-		1 in 9,000,000,000
+	<!-- Hand note -->
+	<text x="420" y="266" class="hand" text-anchor="end" font-size="14">
+		~1 in 9,000,000,000
 	</text>
 </svg>

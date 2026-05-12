@@ -1,71 +1,89 @@
-<svg viewBox="0 0 460 260" class="diagram-svg w-full max-w-md" xmlns="http://www.w3.org/2000/svg">
+<svg
+	viewBox="0 0 460 300"
+	class="diagram-svg w-full max-w-lg"
+	xmlns="http://www.w3.org/2000/svg"
+>
 	<!-- Grid network -->
 	<g transform="translate(40 40)">
 		<text class="label-mono">14 AUG 2003 · CASCADE</text>
 
-		<!-- Nodes -->
-		<g transform="translate(0 20)">
-			<!-- Lines first (drawn under nodes) -->
+		<g transform="translate(0 26)">
+			<!-- Lines (drawn under nodes) -->
 			<g class="ink" stroke-width="1.2">
-				<line x1="40" y1="30" x2="120" y2="30" />
-				<line x1="120" y1="30" x2="200" y2="30" />
-				<line x1="200" y1="30" x2="280" y2="30" />
-				<line x1="280" y1="30" x2="360" y2="30" />
-				<line x1="40" y1="30" x2="120" y2="100" />
-				<line x1="120" y1="100" x2="200" y2="30" />
-				<line x1="200" y1="100" x2="280" y2="30" />
-				<line x1="200" y1="100" x2="280" y2="100" />
-				<line x1="280" y1="100" x2="360" y2="30" />
-				<line x1="280" y1="100" x2="360" y2="100" />
-				<line x1="120" y1="100" x2="200" y2="100" />
+				<line x1="30" y1="30" x2="120" y2="30" />
+				<line x1="120" y1="30" x2="210" y2="30" />
+				<line x1="210" y1="30" x2="300" y2="30" />
+				<line x1="300" y1="30" x2="380" y2="30" />
+				<line x1="30" y1="30" x2="120" y2="100" />
+				<line x1="120" y1="30" x2="210" y2="100" />
+				<line x1="210" y1="30" x2="300" y2="100" />
+				<line x1="300" y1="30" x2="380" y2="100" />
+				<line x1="120" y1="100" x2="210" y2="100" />
+				<line x1="210" y1="100" x2="300" y2="100" />
+				<line x1="300" y1="100" x2="380" y2="100" />
 			</g>
 
-			<!-- Failed lines (red) -->
-			<g class="accent" stroke-width="1.5">
-				<line x1="40" y1="30" x2="120" y2="30" />
-				<line x1="120" y1="30" x2="200" y2="30" />
-				<line x1="40" y1="30" x2="120" y2="100" />
-				<line x1="120" y1="100" x2="200" y2="30" />
+			<!-- Failed lines (accent) -->
+			<g class="accent" stroke-width="1.8">
+				<line x1="30" y1="30" x2="120" y2="30" />
+				<line x1="120" y1="30" x2="210" y2="30" />
+				<line x1="30" y1="30" x2="120" y2="100" />
+				<line x1="120" y1="30" x2="210" y2="100" />
 			</g>
 
 			<!-- Nodes -->
-			<g class="ink" fill="#f6efd9" stroke-width="1.2">
-				<circle cx="40" cy="30" r="8" />
-				<circle cx="120" cy="30" r="8" />
-				<circle cx="200" cy="30" r="8" />
-				<circle cx="280" cy="30" r="8" />
-				<circle cx="360" cy="30" r="8" />
-				<circle cx="120" cy="100" r="8" />
-				<circle cx="200" cy="100" r="8" />
-				<circle cx="280" cy="100" r="8" />
-				<circle cx="360" cy="100" r="8" />
+			<g class="ink" fill="#fbf7ec" stroke-width="1.4">
+				<circle cx="30" cy="30" r="9" />
+				<circle cx="120" cy="30" r="9" />
+				<circle cx="210" cy="30" r="9" />
+				<circle cx="300" cy="30" r="9" />
+				<circle cx="380" cy="30" r="9" />
+				<circle cx="120" cy="100" r="9" />
+				<circle cx="210" cy="100" r="9" />
+				<circle cx="300" cy="100" r="9" />
+				<circle cx="380" cy="100" r="9" />
 			</g>
 
-			<!-- First failure (tree + line) -->
-			<g class="accent">
-				<text x="40" y="14" class="label-mono" text-anchor="middle" font-size="10" fill="#7d2a1d">
+			<!-- First fault: the tree -->
+			<g transform="translate(30 30)">
+				<!-- Tiny tree -->
+				<g class="leaf-fill" fill-opacity="0.55" transform="translate(0 -22)">
+					<ellipse cx="0" cy="-2" rx="7" ry="9" />
+				</g>
+				<line x1="0" y1="-22" x2="0" y2="-13" class="leaf" stroke-width="1" />
+				<text x="-22" y="-26" class="label-mono" fill="#7d2a1d" font-size="9">
 					tree
 				</text>
-				<line x1="40" y1="18" x2="40" y2="22" stroke-width="1.5" />
 			</g>
 		</g>
 	</g>
 
-	<!-- Alarm subsystem -->
+	<!-- Alarm/control row -->
 	<g transform="translate(40 200)">
-		<rect width="180" height="44" class="ink" fill="#f6efd9" />
-		<text x="90" y="18" class="label-mono" text-anchor="middle">XA/21 ALARM PROC</text>
-		<text x="90" y="34" class="hand" text-anchor="middle" font-size="13" fill="#7d2a1d">silent.</text>
+		<g>
+			<rect width="180" height="50" class="ink" fill="#fbf7ec" />
+			<text x="90" y="20" class="label-mono" text-anchor="middle">XA/21 ALARM PROC</text>
+			<text x="90" y="40" class="hand" text-anchor="middle" font-size="14" fill="#7d2a1d">
+				silent.
+			</text>
+		</g>
+
+		<g transform="translate(200 0)">
+			<rect width="180" height="50" class="ink" fill="#fbf7ec" />
+			<text x="90" y="20" class="label-mono" text-anchor="middle">CONTROL ROOM</text>
+			<text x="90" y="40" class="label" text-anchor="middle" font-style="italic" font-size="11">
+				looks normal
+			</text>
+		</g>
+
+		<!-- Broken connector between the two -->
+		<g class="ink" stroke-width="1" stroke-dasharray="2 3" stroke-opacity="0.5">
+			<line x1="180" y1="25" x2="200" y2="25" />
+		</g>
 	</g>
 
-	<g transform="translate(240 200)">
-		<rect width="180" height="44" class="ink" fill="#f6efd9" />
-		<text x="90" y="18" class="label-mono" text-anchor="middle">CONTROL ROOM</text>
-		<text x="90" y="34" class="label" text-anchor="middle" font-style="italic" font-size="11">
-			looks normal
-		</text>
-	</g>
-
-	<!-- Connector -->
-	<line x1="220" y1="222" x2="240" y2="222" class="ink" stroke-width="1.2" stroke-dasharray="2 2" />
+	<!-- Caption -->
+	<text x="230" y="275" class="hand" text-anchor="middle" font-size="13">
+		The watcher that watches the watcher.
+	</text>
 </svg>

@@ -10,11 +10,17 @@
 	<h2 class="!mt-2 font-display text-3xl font-semibold text-ink-900">About this guide</h2>
 
 	<p>
-		Bugs is a field guide to twelve specimens collected from the history of computing between
-		1947 and 2024. Each entry is illustrated, dated, taxonomized, and described in the voice of
-		someone who finds the particular causes interesting and the consequences instructive. The
-		project takes its visual cue from naturalist field guides, which is the form best suited to
-		things that are at once technical, peculiar, and worth a closer look.
+		Bugs is a field guide to specimens collected from the history of computing. Each entry is
+		illustrated, dated, taxonomized, and described in the voice of someone who finds the
+		particular causes interesting and the consequences instructive. The project takes its visual
+		cue from naturalist field guides, which is the form best suited to things that are at once
+		technical, peculiar, and worth a closer look.
+	</p>
+
+	<p>
+		The catalog grows when a specimen earns its page. There is no fixed count, no target number.
+		A bug enters the guide when there is a clean story to tell about it and a diagram worth
+		drawing.
 	</p>
 
 	<p>

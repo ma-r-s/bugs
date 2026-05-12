@@ -1,47 +1,69 @@
-<svg viewBox="0 0 420 260" class="diagram-svg w-full max-w-md" xmlns="http://www.w3.org/2000/svg">
-	<!-- Campus origin -->
-	<circle cx="210" cy="130" r="3" class="ink-fill" />
-	<text x="215" y="124" class="label">Chapel Hill</text>
+<svg
+	viewBox="0 0 460 320"
+	class="diagram-svg w-full max-w-lg"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<!-- Origin: Chapel Hill -->
+	<g transform="translate(180 170)">
+		<!-- Concentric rings -->
+		<circle r="40" class="ink" stroke-dasharray="2 3" stroke-opacity="0.35" />
+		<circle r="85" class="ink" stroke-dasharray="2 3" stroke-opacity="0.35" />
+		<circle r="125" class="accent" stroke-width="1.6" />
 
-	<!-- Concentric distance rings -->
-	<circle cx="210" cy="130" r="40" class="ink" stroke-dasharray="2 3" stroke-opacity="0.5" />
-	<circle cx="210" cy="130" r="80" class="ink" stroke-dasharray="2 3" stroke-opacity="0.5" />
-	<circle cx="210" cy="130" r="115" class="accent" stroke-width="1.5" />
+		<!-- Ring labels (placed at varying angles to avoid collision) -->
+		<text x="0" y="-45" text-anchor="middle" class="label-mono" font-size="9" fill-opacity="0.55">
+			200 mi
+		</text>
+		<text x="0" y="-90" text-anchor="middle" class="label-mono" font-size="9" fill-opacity="0.55">
+			400 mi
+		</text>
+		<text x="0" y="-132" text-anchor="middle" class="label-mono" font-size="10" fill="#7d2a1d">
+			~500 mi (cutoff)
+		</text>
 
-	<!-- Ring labels -->
-	<text x="244" y="135" class="label-mono">200 mi</text>
-	<text x="285" y="135" class="label-mono">400 mi</text>
-	<text x="328" y="135" class="label-mono">~500 mi</text>
+		<!-- Origin dot + label -->
+		<circle r="3" class="ink-fill" />
+		<text x="6" y="-6" class="label">Chapel Hill</text>
 
-	<!-- Successful packet (short hop) -->
-	<g stroke-linecap="round">
-		<path d="M210 130 L165 95" class="ink" stroke-width="1.2" />
-		<polygon points="161,92 168,93 165,99" class="ink-fill" />
-		<text x="148" y="84" class="label">Princeton ✓</text>
+		<!-- Princeton (NE, inside ring 2) -->
+		<g transform="translate(55 -55)">
+			<circle r="3" class="ink-fill" />
+			<text x="6" y="-4" class="label">Princeton ✓</text>
+		</g>
+		<line x1="3" y1="-2" x2="51" y2="-53" class="ink" stroke-width="0.6" stroke-opacity="0.3" />
+
+		<!-- Memphis (SW, inside ring 3 near edge) -->
+		<g transform="translate(-95 75)">
+			<circle r="3" class="ink-fill" />
+			<text x="-6" y="-4" class="label" text-anchor="end">Memphis ✓</text>
+		</g>
+		<line x1="-3" y1="2" x2="-92" y2="73" class="ink" stroke-width="0.6" stroke-opacity="0.3" />
+
+		<!-- Houston (outside the ring, fails) -->
+		<g transform="translate(155 32)">
+			<circle r="3.5" class="accent-fill" />
+			<text x="8" y="4" class="label" fill="#7d2a1d">Houston ✕</text>
+		</g>
+		<path
+			d="M3 1 L153 31"
+			class="accent"
+			stroke-dasharray="3 2"
+			stroke-width="1.2"
+		/>
 	</g>
 
-	<!-- Successful (medium) -->
-	<g>
-		<path d="M210 130 L250 200" class="ink" stroke-width="1.2" />
-		<polygon points="253,204 246,202 250,209" class="ink-fill" />
-		<text x="226" y="220" class="label">Memphis ✓</text>
+	<!-- Math callout bottom-left -->
+	<g transform="translate(28 270)">
+		<text class="label-mono">timeout = 0  →  ~3 ms</text>
+		<text y="14" class="label-mono">c · 3ms ÷ 2  ≈  500 mi</text>
 	</g>
 
-	<!-- Failed packet, bounces off ring -->
-	<g>
-		<path d="M210 130 L335 175" class="accent" stroke-width="1.5" stroke-dasharray="3 2" />
-		<circle cx="335" cy="175" r="4" class="accent-fill" />
-		<text x="343" y="178" class="label" fill="currentColor">Houston ✕</text>
-	</g>
-
-	<!-- Speed-of-light annotation -->
-	<g transform="translate(40, 215)">
-		<text class="label-mono">timeout = 0 → ~3ms</text>
-		<text y="14" class="label-mono">c × 3ms ÷ 2 ≈ 500 mi</text>
-	</g>
-
-	<!-- Hand-written note -->
-	<text x="40" y="50" class="hand" transform="rotate(-4 40 50)">
-		"it works to Memphis."
-	</text>
+	<!-- Handwritten note top-left -->
+	<text
+		x="40"
+		y="40"
+		class="hand"
+		font-size="15"
+		transform="rotate(-3 40 40)"
+	>"...but it works to Memphis."</text>
 </svg>

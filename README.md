@@ -1,15 +1,15 @@
 # Bugs
 
-A field guide to twelve famous software bugs, illustrated and explained.
+A field guide to famous software bugs, illustrated and explained.
 
 Each entry has a specimen ID, taxonomy, first-observed date, habitat, observer,
 a 500-to-800-word writeup, and a custom inline-SVG diagram drawn for it. The
-collection is curated rather than open: twelve specimens, hand-picked from the
-published record between 1947 and 2024.
+collection is curated rather than open. The catalog grows when a specimen earns
+its page.
 
 **Live:** [bugs.ma-r-s.com](https://bugs.ma-r-s.com)
 
-## The catalog
+## Current catalog
 
 | ID     | Year      | Specimen                                  |
 | ------ | --------- | ----------------------------------------- |
@@ -18,7 +18,7 @@ published record between 1947 and 2024.
 | BG-003 | 2008      | OpenOffice Will Not Print on Tuesdays     |
 | BG-004 | 1962      | Mariner 1's Missing Overbar               |
 | BG-005 | 1985-1987 | Therac-25                                 |
-| BG-006 | 1991      | The Patriot at Dharan                     |
+| BG-006 | 1991      | The Patriot at Dhahran                    |
 | BG-007 | 1980      | Pac-Man Level 256                         |
 | BG-008 | 1991      | Nuclear Gandhi (the myth)                 |
 | BG-009 | 2012      | Knight Capital's 45 Minutes               |

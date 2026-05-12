@@ -1,86 +1,115 @@
-<svg viewBox="0 0 460 260" class="diagram-svg w-full max-w-md" xmlns="http://www.w3.org/2000/svg">
-	<!-- Counter strip -->
+<svg
+	viewBox="0 0 460 300"
+	class="diagram-svg w-full max-w-lg"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<!-- Counter overflow strip (top) -->
 	<g transform="translate(40 30)">
-		<text class="label-mono">level counter (uint8)</text>
-		<g transform="translate(0 8)">
-			<rect x="0" y="0" width="60" height="20" class="ink" />
-			<text x="30" y="14" class="label-mono" text-anchor="middle">255</text>
-			<line x1="62" y1="10" x2="80" y2="10" class="ink" stroke-width="1.2" />
-			<polygon points="84,10 76,7 76,13" class="ink-fill" />
-			<rect x="82" y="0" width="60" height="20" class="accent" />
-			<text x="112" y="14" class="label-mono" text-anchor="middle" fill="#7d2a1d">0</text>
-			<text x="148" y="14" class="label" font-size="11">overflow</text>
+		<text class="label-mono">LEVEL COUNTER · uint8</text>
+		<g transform="translate(0 18)">
+			<rect width="64" height="26" class="ink" fill="#fbf7ec" />
+			<text x="32" y="17" class="label-mono" text-anchor="middle" font-size="11">255</text>
+			<line x1="66" y1="13" x2="86" y2="13" class="ink" stroke-width="1.2" />
+			<polygon points="90,13 82,9 82,17" class="ink-fill" />
+			<rect x="90" y="0" width="64" height="26" class="accent" fill="#a13929" fill-opacity="0.12" />
+			<text x="122" y="17" class="label-mono" text-anchor="middle" font-size="11" fill="#7d2a1d">
+				0
+			</text>
+			<text x="164" y="17" class="label" font-style="italic" font-size="11">overflow</text>
 		</g>
 	</g>
 
-	<!-- Left: normal maze grid -->
+	<!-- Maze comparison -->
 	<g transform="translate(40 100)">
-		<text x="60" y="-6" class="label-mono" text-anchor="middle">LEVEL 255</text>
-		<g class="ink" stroke-width="1.2" fill="none">
-			<rect x="0" y="0" width="120" height="120" />
-			<!-- Maze lines -->
-			<line x1="0" y1="20" x2="40" y2="20" />
-			<line x1="60" y1="20" x2="120" y2="20" />
-			<line x1="20" y1="40" x2="100" y2="40" />
-			<line x1="0" y1="60" x2="60" y2="60" />
-			<line x1="80" y1="60" x2="120" y2="60" />
-			<line x1="20" y1="80" x2="100" y2="80" />
-			<line x1="0" y1="100" x2="40" y2="100" />
-			<line x1="60" y1="100" x2="120" y2="100" />
+		<!-- Level 255 (intact) -->
+		<text x="65" y="-8" class="label-mono" text-anchor="middle">LEVEL 255</text>
+		<g transform="translate(0 0)">
+			<rect width="130" height="130" class="ink" stroke-width="1.4" fill="#fbf7ec" />
+			<g class="ink" stroke-width="1.1" fill="none">
+				<line x1="0" y1="22" x2="45" y2="22" />
+				<line x1="65" y1="22" x2="130" y2="22" />
+				<line x1="22" y1="44" x2="108" y2="44" />
+				<line x1="0" y1="66" x2="60" y2="66" />
+				<line x1="85" y1="66" x2="130" y2="66" />
+				<line x1="22" y1="88" x2="108" y2="88" />
+				<line x1="0" y1="110" x2="45" y2="110" />
+				<line x1="65" y1="110" x2="130" y2="110" />
+			</g>
+			<!-- pellets -->
+			<g class="ink-fill">
+				<circle cx="11" cy="33" r="1.6" />
+				<circle cx="33" cy="33" r="1.6" />
+				<circle cx="55" cy="33" r="1.6" />
+				<circle cx="75" cy="33" r="1.6" />
+				<circle cx="97" cy="33" r="1.6" />
+				<circle cx="119" cy="33" r="1.6" />
+				<circle cx="11" cy="55" r="1.6" />
+				<circle cx="119" cy="55" r="1.6" />
+				<circle cx="11" cy="77" r="1.6" />
+				<circle cx="119" cy="77" r="1.6" />
+				<circle cx="11" cy="99" r="1.6" />
+				<circle cx="119" cy="99" r="1.6" />
+			</g>
+			<!-- Pac-Man -->
+			<g transform="translate(65 88)">
+				<path d="M0 0 L 7 -2 A 8 8 0 1 1 7 2 Z" class="ink-fill" />
+			</g>
 		</g>
-		<!-- Dots -->
-		<g class="ink-fill">
-			<circle cx="10" cy="30" r="1.5" />
-			<circle cx="30" cy="30" r="1.5" />
-			<circle cx="50" cy="30" r="1.5" />
-			<circle cx="70" cy="30" r="1.5" />
-			<circle cx="90" cy="30" r="1.5" />
-			<circle cx="110" cy="30" r="1.5" />
-			<circle cx="10" cy="50" r="1.5" />
-			<circle cx="110" cy="50" r="1.5" />
-			<circle cx="10" cy="90" r="1.5" />
-			<circle cx="110" cy="90" r="1.5" />
+
+		<!-- Divider arrow between mazes -->
+		<g transform="translate(160 60)">
+			<line x1="0" y1="-20" x2="0" y2="20" class="ink" stroke-width="0.8" stroke-dasharray="3 3" stroke-opacity="0.5" />
+			<text x="0" y="70" class="hand" text-anchor="middle" font-size="13">
+				+1 →
+			</text>
 		</g>
-		<!-- Pac-Man -->
-		<path d="M60 80 a 7 7 0 1 1 5 -3 z" class="ink-fill" />
+
+		<!-- Level 256 (corrupt) -->
+		<g transform="translate(190 0)">
+			<text x="65" y="-8" class="label-mono" text-anchor="middle" fill="#7d2a1d">
+				LEVEL 256
+			</text>
+			<rect width="130" height="130" class="accent" stroke-width="1.4" fill="#fbf7ec" />
+			<!-- Left half: normal maze -->
+			<g class="ink" stroke-width="1.1" fill="none">
+				<line x1="0" y1="22" x2="45" y2="22" />
+				<line x1="22" y1="44" x2="65" y2="44" />
+				<line x1="0" y1="66" x2="60" y2="66" />
+				<line x1="22" y1="88" x2="65" y2="88" />
+				<line x1="0" y1="110" x2="45" y2="110" />
+			</g>
+			<!-- Center divider (where corruption begins) -->
+			<line x1="65" y1="6" x2="65" y2="124" class="accent" stroke-width="0.6" stroke-dasharray="2 2" stroke-opacity="0.6" />
+			<!-- Right half: garbage tiles -->
+			<g class="accent" fill="#a13929" fill-opacity="0.45" stroke="none">
+				<rect x="68" y="6" width="8" height="6" />
+				<rect x="80" y="14" width="14" height="6" />
+				<rect x="100" y="8" width="6" height="14" />
+				<rect x="112" y="18" width="14" height="6" />
+				<rect x="70" y="28" width="14" height="6" />
+				<rect x="88" y="32" width="8" height="12" />
+				<rect x="102" y="28" width="12" height="6" />
+				<rect x="118" y="36" width="8" height="8" />
+				<rect x="70" y="50" width="8" height="6" />
+				<rect x="82" y="54" width="14" height="4" />
+				<rect x="100" y="50" width="6" height="14" />
+				<rect x="112" y="60" width="14" height="6" />
+				<rect x="68" y="72" width="20" height="6" />
+				<rect x="92" y="68" width="10" height="12" />
+				<rect x="106" y="74" width="18" height="6" />
+				<rect x="70" y="92" width="8" height="8" />
+				<rect x="82" y="96" width="14" height="6" />
+				<rect x="100" y="94" width="8" height="8" />
+				<rect x="112" y="98" width="14" height="6" />
+				<rect x="68" y="116" width="20" height="4" />
+				<rect x="94" y="112" width="6" height="12" />
+				<rect x="104" y="114" width="22" height="6" />
+			</g>
+		</g>
 	</g>
 
-	<!-- Right: corrupted maze -->
-	<g transform="translate(280 100)">
-		<text x="60" y="-6" class="label-mono" text-anchor="middle" fill="#7d2a1d">LEVEL 256</text>
-		<!-- Normal left half -->
-		<g class="ink" stroke-width="1.2" fill="none">
-			<rect x="0" y="0" width="60" height="120" />
-			<line x1="0" y1="20" x2="40" y2="20" />
-			<line x1="20" y1="40" x2="60" y2="40" />
-			<line x1="0" y1="60" x2="60" y2="60" />
-			<line x1="20" y1="80" x2="60" y2="80" />
-			<line x1="0" y1="100" x2="40" y2="100" />
-		</g>
-		<!-- Corrupted right half: random rects -->
-		<g class="accent" fill="#a13929" fill-opacity="0.5" stroke="none">
-			<rect x="62" y="2" width="6" height="6" />
-			<rect x="72" y="10" width="10" height="4" />
-			<rect x="86" y="4" width="4" height="12" />
-			<rect x="94" y="14" width="14" height="6" />
-			<rect x="64" y="22" width="12" height="4" />
-			<rect x="80" y="26" width="6" height="10" />
-			<rect x="92" y="22" width="10" height="6" />
-			<rect x="108" y="30" width="8" height="8" />
-			<rect x="64" y="40" width="6" height="6" />
-			<rect x="74" y="44" width="10" height="4" />
-			<rect x="88" y="40" width="4" height="14" />
-			<rect x="98" y="50" width="12" height="4" />
-			<rect x="66" y="62" width="16" height="6" />
-			<rect x="86" y="58" width="8" height="10" />
-			<rect x="100" y="64" width="14" height="4" />
-			<rect x="64" y="80" width="6" height="6" />
-			<rect x="74" y="84" width="10" height="4" />
-			<rect x="90" y="82" width="6" height="6" />
-			<rect x="100" y="86" width="12" height="6" />
-			<rect x="66" y="100" width="14" height="4" />
-			<rect x="84" y="104" width="6" height="10" />
-			<rect x="96" y="100" width="18" height="6" />
-		</g>
-	</g>
+	<!-- Caption -->
+	<text x="230" y="265" class="hand" text-anchor="middle" font-size="14">
+		fruit drawer iterates 255 times, off the table, into game memory.
+	</text>
 </svg>

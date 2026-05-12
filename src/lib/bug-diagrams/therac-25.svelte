@@ -1,49 +1,78 @@
-<svg viewBox="0 0 460 260" class="diagram-svg w-full max-w-md" xmlns="http://www.w3.org/2000/svg">
-	<!-- Top timeline: operator -->
-	<g transform="translate(40 60)">
-		<text x="-10" y="-12" class="label-mono">OPERATOR</text>
-		<line x1="0" y1="0" x2="380" y2="0" class="ink" stroke-width="1" />
+<svg
+	viewBox="0 0 460 280"
+	class="diagram-svg w-full max-w-lg"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<!-- OPERATOR timeline -->
+	<g transform="translate(50 70)">
+		<text x="-12" y="-14" class="label-mono">OPERATOR</text>
+		<line x1="0" y1="0" x2="370" y2="0" class="ink" stroke-width="1" />
 
-		<!-- Keystrokes -->
+		<!-- Keystroke dots -->
 		<g class="ink-fill">
-			<circle cx="20" cy="0" r="3" />
-			<circle cx="90" cy="0" r="3" />
-			<circle cx="160" cy="0" r="3" />
-			<circle cx="220" cy="0" r="3" />
+			<circle cx="30" cy="0" r="3.5" />
+			<circle cx="110" cy="0" r="3.5" />
+			<circle cx="195" cy="0" r="3.5" />
+			<circle cx="280" cy="0" r="3.5" />
 		</g>
-		<text x="20" y="-10" class="label-mono" text-anchor="middle">x</text>
-		<text x="90" y="-10" class="label-mono" text-anchor="middle">↑</text>
-		<text x="160" y="-10" class="label-mono" text-anchor="middle">e</text>
-		<text x="220" y="-10" class="label-mono" text-anchor="middle">⏎</text>
-		<text x="20" y="18" class="label" text-anchor="middle" font-size="9">X-ray</text>
-		<text x="90" y="18" class="label" text-anchor="middle" font-size="9">undo</text>
-		<text x="160" y="18" class="label" text-anchor="middle" font-size="9">electron</text>
-		<text x="220" y="18" class="label" text-anchor="middle" font-size="9">FIRE</text>
+
+		<!-- Keystroke labels above (drawn glyphs, not Unicode that may not render) -->
+		<g transform="translate(30 -20)">
+			<text class="label-mono" text-anchor="middle" font-size="13">x</text>
+		</g>
+		<g transform="translate(110 -16)" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" fill="none">
+			<line x1="0" y1="2" x2="0" y2="-10" />
+			<line x1="-4" y1="-6" x2="0" y2="-10" />
+			<line x1="4" y1="-6" x2="0" y2="-10" />
+		</g>
+		<g transform="translate(195 -20)">
+			<text class="label-mono" text-anchor="middle" font-size="13">e</text>
+		</g>
+		<g transform="translate(280 -18)" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" fill="none">
+			<path d="M-6 -4 L 6 -4 L 6 0" />
+			<path d="M-2 -8 L -6 -4 L -2 0" />
+		</g>
+
+		<!-- Caption labels below dots -->
+		<text x="30" y="18" class="label" text-anchor="middle" font-size="10">X-ray</text>
+		<text x="110" y="18" class="label" text-anchor="middle" font-size="10">undo</text>
+		<text x="195" y="18" class="label" text-anchor="middle" font-size="10">electron</text>
+		<text x="280" y="18" class="label" text-anchor="middle" font-size="10" fill="#7d2a1d">FIRE</text>
 	</g>
 
-	<!-- Lower timeline: turntable -->
-	<g transform="translate(40 160)">
-		<text x="-10" y="-12" class="label-mono">TURNTABLE</text>
-		<line x1="0" y1="0" x2="380" y2="0" class="ink" stroke-width="1" />
+	<!-- TURNTABLE timeline -->
+	<g transform="translate(50 180)">
+		<text x="-12" y="-14" class="label-mono">TURNTABLE</text>
+		<line x1="0" y1="0" x2="370" y2="0" class="ink" stroke-width="1" />
 
-		<!-- Rotation in progress (8s) -->
-		<rect x="20" y="-6" width="240" height="12" class="ink" fill="#dfca8a" fill-opacity="0.5" />
-		<text x="140" y="3" class="label" text-anchor="middle" font-size="11">rotating · 8s</text>
+		<!-- Rotation bar -->
+		<rect x="30" y="-8" width="280" height="16" class="ink" fill="#dfca8a" fill-opacity="0.45" />
+		<text x="170" y="4" class="label" text-anchor="middle" font-size="11">
+			rotating · 8 seconds
+		</text>
 
-		<!-- Fire window -->
-		<g class="accent">
-			<line x1="220" y1="-18" x2="220" y2="18" stroke-width="1.5" stroke-dasharray="2 2" />
+		<!-- Kill window indicator -->
+		<g class="accent" stroke-width="1.5">
+			<line x1="280" y1="-22" x2="280" y2="22" stroke-dasharray="2 2" />
 		</g>
-		<text x="220" y="32" class="label" text-anchor="middle" fill="#7d2a1d" font-size="11">
+		<text x="280" y="38" class="label" text-anchor="middle" fill="#7d2a1d" font-size="11">
 			Enter pressed mid-rotation
 		</text>
 	</g>
 
-	<!-- Connector -->
-	<line x1="260" y1="80" x2="260" y2="148" class="accent" stroke-width="1" stroke-dasharray="2 2" />
+	<!-- Connector line between FIRE keystroke and kill window -->
+	<line
+		x1="330"
+		y1="92"
+		x2="330"
+		y2="168"
+		class="accent"
+		stroke-width="1"
+		stroke-dasharray="2 2"
+	/>
 
 	<!-- Caption -->
-	<text x="230" y="240" class="hand" text-anchor="middle">
-		The variable for "input mode" is the variable for "turntable ready".
+	<text x="230" y="260" class="hand" text-anchor="middle" font-size="14">
+		The variable for "input mode" is the variable for "turntable ready."
 	</text>
 </svg>
