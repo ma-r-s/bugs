@@ -15,7 +15,8 @@
 				font-size="28"
 				fill="currentColor"
 			>R</text>
-			<line x1="3" y1="-22" x2="18" y2="-22" class="ink" stroke-width="2" />
+			<!-- Overbar centered on the R glyph (monospace advance ~17px; glyph center ~8.5) -->
+			<line x1="1" y1="-22" x2="16" y2="-22" class="ink" stroke-width="2" />
 			<text
 				x="22"
 				y="0"
@@ -42,9 +43,9 @@
 			     Same coordinates as the solid overbar on the INTENDED side, so the
 			     two equations read as a side-by-side comparison. -->
 			<line
-				x1="3"
+				x1="1"
 				y1="-22"
-				x2="18"
+				x2="16"
 				y2="-22"
 				class="accent"
 				stroke-width="1.6"
