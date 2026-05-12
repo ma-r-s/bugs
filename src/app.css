@@ -80,6 +80,19 @@
   .diagram-svg {
     color: theme("colors.ink.700");
   }
+  /* Cartographer's halo: every label punches through whatever line passes
+     behind it. The stroke is drawn first under the text fill, so any
+     line/path drawn BEFORE the text in document order is cleanly cut out
+     from under the letterforms. Lines drawn AFTER the text (e.g., the
+     nuclear-gandhi strikethrough) still pass on top, which is the
+     desired behavior. */
+  .diagram-svg text {
+    paint-order: stroke fill;
+    stroke: theme("colors.parchment.100");
+    stroke-width: 3px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
   .diagram-svg .ink {
     stroke: currentColor;
     fill: none;
