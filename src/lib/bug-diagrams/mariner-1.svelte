@@ -38,10 +38,18 @@
 				font-size="28"
 				fill="currentColor"
 			>R</text>
-			<!-- caret marking the missing bar -->
-			<g transform="translate(2 -24)">
-				<path d="M0 0 L7 -8 L14 0" class="accent" stroke-width="1.4" fill="none" />
-			</g>
+			<!-- Ghost overbar: dashed line where the real overbar should have been.
+			     Same coordinates as the solid overbar on the INTENDED side, so the
+			     two equations read as a side-by-side comparison. -->
+			<line
+				x1="3"
+				y1="-22"
+				x2="18"
+				y2="-22"
+				class="accent"
+				stroke-width="1.6"
+				stroke-dasharray="2.5 2"
+			/>
 			<text
 				x="22"
 				y="0"
