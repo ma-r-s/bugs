@@ -4,8 +4,8 @@
 	xmlns="http://www.w3.org/2000/svg"
 >
 	<!-- OPERATOR timeline -->
-	<g transform="translate(50 70)">
-		<text x="-12" y="-14" class="label-mono">OPERATOR</text>
+	<g transform="translate(50 80)">
+		<text x="-12" y="-38" class="label-mono">OPERATOR</text>
 		<line x1="0" y1="0" x2="370" y2="0" class="ink" stroke-width="1" />
 
 		<!-- Keystroke dots -->
@@ -41,8 +41,8 @@
 	</g>
 
 	<!-- TURNTABLE timeline -->
-	<g transform="translate(50 180)">
-		<text x="-12" y="-14" class="label-mono">TURNTABLE</text>
+	<g transform="translate(50 190)">
+		<text x="-12" y="-30" class="label-mono">TURNTABLE</text>
 		<line x1="0" y1="0" x2="370" y2="0" class="ink" stroke-width="1" />
 
 		<!-- Rotation bar -->
@@ -63,9 +63,9 @@
 	<!-- Connector line between FIRE keystroke and kill window -->
 	<line
 		x1="330"
-		y1="92"
+		y1="102"
 		x2="330"
-		y2="168"
+		y2="178"
 		class="accent"
 		stroke-width="1"
 		stroke-dasharray="2 2"
