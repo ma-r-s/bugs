@@ -58,12 +58,13 @@
 		<text y="14" class="label-mono">c · 3ms ÷ 2  ≈  500 mi</text>
 	</g>
 
-	<!-- Handwritten note top-left -->
+	<!-- Handwritten note bottom-right (well clear of the ring labels) -->
 	<text
-		x="40"
-		y="40"
+		x="420"
+		y="270"
 		class="hand"
-		font-size="15"
-		transform="rotate(-3 40 40)"
+		font-size="14"
+		text-anchor="end"
+		transform="rotate(-3 420 270)"
 	>"...but it works to Memphis."</text>
 </svg>

@@ -38,30 +38,31 @@
 	</g>
 
 	<!-- Trajectory diagram (right) -->
-	<g transform="translate(220 70)">
+	<g transform="translate(210 70)">
 		<text x="0" y="-10" class="label-mono">SCUD TRAJECTORY</text>
 
 		<!-- Actual path -->
-		<path d="M0 0 q 80 30 200 80" class="ink" stroke-width="1.6" fill="none" />
-		<circle cx="200" cy="80" r="3.5" class="ink-fill" />
-		<text x="194" y="100" class="label" font-size="11">actual impact</text>
+		<path d="M0 0 q 70 28 180 70" class="ink" stroke-width="1.6" fill="none" />
+		<circle cx="180" cy="70" r="3.5" class="ink-fill" />
+		<text x="172" y="90" class="label" font-size="11">actual impact</text>
 
 		<!-- Predicted path (short by 570m) -->
 		<path
-			d="M0 0 q 70 -2 195 28"
+			d="M0 0 q 60 -4 175 22"
 			class="accent"
 			stroke-width="1.5"
 			stroke-dasharray="3 2"
 			fill="none"
 		/>
-		<circle cx="195" cy="28" r="3.5" class="accent-fill" />
-		<text x="160" y="20" class="label" fill="#7d2a1d" font-size="11">
-			predicted (570 m short)
+		<circle cx="175" cy="22" r="3.5" class="accent-fill" />
+		<text x="170" y="14" class="label" fill="#7d2a1d" font-size="11" text-anchor="end">
+			predicted (−570 m)
 		</text>
 
 		<!-- Distance bracket between the two impact points -->
-		<g class="ink" stroke-opacity="0.4">
-			<line x1="200" y1="80" x2="195" y2="28" stroke-width="0.8" stroke-dasharray="1 2" />
+		<g class="ink" stroke-opacity="0.45">
+			<line x1="180" y1="70" x2="175" y2="22" stroke-width="0.8" stroke-dasharray="1 2" />
+			<text x="186" y="48" class="label-mono" font-size="9" fill-opacity="0.7">570 m</text>
 		</g>
 	</g>
 

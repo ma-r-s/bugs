@@ -60,32 +60,31 @@
 	<g transform="translate(40 200)">
 		<text class="label-mono">TRAJECTORY</text>
 
-		<!-- Smoothed curve -->
+		<!-- Smoothed curve (the intended flight) -->
 		<path
-			d="M0 18 q 50 -6 100 0 t 100 0 t 100 0 t 70 0"
+			d="M0 18 q 50 -6 100 0 t 100 0 t 100 0 t 80 0"
 			class="ink"
 			stroke-width="1.5"
 			fill="none"
+			stroke-opacity="0.55"
 		/>
-		<text x="380" y="22" class="label">smoothed</text>
+		<text x="295" y="14" class="label" font-style="italic">intended flight</text>
 
-		<!-- Raw zigzag -->
+		<!-- Raw zigzag (the actual veer-off) -->
 		<path
-			d="M0 60 l 8 -12 l 8 14 l 10 -10 l 8 8 l 12 -16 l 8 14 l 14 -12 l 8 10 l 12 -18 l 10 18 l 16 -16 l 14 14 l 18 -20 l 22 22 l 24 -28 l 24 30"
+			d="M0 60 l 10 -14 l 10 18 l 12 -12 l 10 10 l 14 -20 l 10 18 l 16 -14 l 12 14 l 14 -22 l 12 24 l 18 -20 l 16 18 l 22 -26 l 24 30 l 30 -38 l 30 52"
 			class="accent"
-			stroke-width="1.5"
+			stroke-width="1.6"
 			fill="none"
 		/>
-		<text x="240" y="88" class="label" fill="#7d2a1d">raw → veer-off</text>
+		<text x="60" y="100" class="label" fill="#7d2a1d">raw → veer-off</text>
 	</g>
 
-	<!-- Rocket icon -->
-	<g transform="translate(395 230)">
-		<g transform="rotate(35)">
-			<path d="M0 0 L 4 -16 L 8 0 Z" class="ink" fill="#f6efd9" stroke-width="1.2" />
-			<line x1="1" y1="0" x2="-2" y2="6" class="accent" stroke-width="1.2" />
-			<line x1="7" y1="0" x2="10" y2="6" class="accent" stroke-width="1.2" />
-		</g>
-		<text x="-32" y="24" class="hand" fill="#7d2a1d" font-size="13">T+293s</text>
+	<!-- Rocket icon at the END of the raw zigzag -->
+	<g transform="translate(300 274) rotate(50)">
+		<path d="M-4 0 L 0 -18 L 4 0 Z" class="ink" fill="#f6efd9" stroke-width="1.2" />
+		<line x1="-2" y1="0" x2="-5" y2="8" class="accent" stroke-width="1.2" />
+		<line x1="2" y1="0" x2="5" y2="8" class="accent" stroke-width="1.2" />
 	</g>
+	<text x="316" y="284" class="hand" fill="#7d2a1d" font-size="13">T+293s</text>
 </svg>
